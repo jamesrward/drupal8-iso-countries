@@ -1,0 +1,23 @@
+id: country_csv
+label: Import countries
+migration_groups:
+  - csv_import
+
+source:
+  plugin: csv
+  path: 'sites/default/files/private/iso_3166_2_countries.csv'
+  header_row_count: 1
+  keys:
+    - Alpha2
+
+process:
+  title: Name
+  field_country_alpha2: Alpha2
+  field_country_alpha3: Alpha3
+  field_country_formal_name: Formal_Name
+  type:
+    plugin: default_value
+    default_value: country
+
+destination:
+  plugin: entity:node
