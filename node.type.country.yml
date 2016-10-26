@@ -1,0 +1,9 @@
+langcode: en
+status: true
+name: Country
+type: country
+description: 'Country name with 3 and 2 letter iso codes'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
